@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DocDiagnose Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DocDiagnose</div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="/login">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to DocDiagnose</h1>
+        <p>Your personalized doctor recommendation system powered by smart search.</p>
+        <a href="/recommend" class="cta-button">Find a Doctor</a>
+    </section>
+
+    <section class="features">
+        <h2>What You Can Do</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Symptom Search</h3>
+                <p>Input your symptoms and get recommended the best doctors near you.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Doctor Details</h3>
+                <p>Explore our verified list of experienced professionals in every field.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Smart Matching</h3>
+                <p>Our system analyzes your input and finds the most suitable specialist.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DocDiagnose. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- templates/recommend.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='recommend.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Find the Right Doctor</h1>
+
+        <form method="POST" action="/recommend">
+            <label for="symptom">Describe your symptoms:</label>
+            <textarea name="symptom" id="symptom" placeholder="e.g., chest pain, fever, anxiety..." required>{{ symptom or '' }}</textarea>
+
+            <label for="location">Enter your full address:</label>
+            <input type="text" name="location" id="location" placeholder="e.g., 12-4, Krishna Nagar, Nellore, Andhra Pradesh" required value="{{ location or '' }}">
+
+            <button type="submit">Find a Doctor</button>
+        </form>
+
+        {% if error %}
+        <p class="error" style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        {% if doctor %}
+        <div class="result">
+            <h2>Nearest {{ specialty }} based on your symptom: "{{ symptom }}"</h2>
+            <p><strong>Name:</strong> {{ doctor.name }}</p>
+            <p><strong>Specialty:</strong> {{ doctor.specialty }}</p>
+            <p><strong>Address:</strong> {{ doctor.address }}, {{ doctor.city }}, {{ doctor.state }} - {{ doctor.pincode }}</p>
+            <p><strong>Contact:</strong> {{ doctor.contact }}</p>
+            <p><strong>Rating:</strong> {{ doctor.rating }}</p>
+            <p><strong>Distance:</strong> {{ distance }} km away</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

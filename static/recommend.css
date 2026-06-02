@@ -1,0 +1,96 @@
+/* static/recommend.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+textarea {
+    padding: 15px;
+    font-size: 16px;
+    resize: none;
+    height: 100px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    align-self: center;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.doctor-list {
+    list-style: none;
+    padding: 0;
+}
+
+.doctor-card {
+    background: #ecf0f1;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+textarea,
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.result {
+    background: #e6ffe6;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border-left: 5px solid green;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
